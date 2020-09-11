@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Çedar Peynirleri</title>
+
+	<!-- * META * -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+
+	<!-- * OPEN GRAPH PROTOCOL * -->
+	<meta name="twitter:card" content="summary">
+	<meta property="theme-color" content="#ac8ebd">
+	<meta name="og:description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et">
+	<meta name="og:title" content="Çedar Peynirleri">
+	<meta name="og:site_name" content="Çedar Peynirleri">
+	<meta name="og:type" content="website">
+
+	<!-- * LINKS * -->	
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon"href="https://i.imgur.com/sFvxbBc.gif">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300" rel="stylesheet" type="text/css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+	<!-- * JAVA SCRIPT * -->	
+	<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+  	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+</head>
+<body>
+
+
+	<!-- * PRELOADER * -->
+
+  	<div class="loader-wrapper">
+      	<span class="loader"><span class="loader-inner"></span></span>
+  	</div>  
+
+	<!-- * HEADER + NAV * -->
+	
+	<section class="banner" id="home">
+    <div class="overlay"></div>		
+		<header>
+			<a href="#" class="logo">Çedar </a>
+			<div id="toggle" onclick="toggle()"></div>
+		</header>
+
+		<div class="content" data-aos="fade-right" data-aos-duration="1000">
+			<h2>
+				Hello World,<br>I'm <span>Towasty</span>
+			</h2>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex 
+			</p>
+			<a href="#about"><i class="fas fa-arrow-right" style="margin-right: 10px;"></i>Read More</a>
+		</div>
+
+	</section>
+
+	<div id="navigation">
+		<ul>
+			<li><a href="#" class="colored">Home</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="Members/members.html">Team</a></li>
+			<li><a href="#">Discord</a></li>
+		</ul>
+	</div>
+	
+	<!-- * ABOUT US * -->
+
+	<section class="services p-t-30" id="about">
+		<h1>About <span>Cedar</span></h1>
+		<div class="container">
+			<div class="service">
+				<i class="fas fa-air-freshener"></i>
+				<h2>Spaghetti</h2>
+				<p>We offer a good price for what you get. We have tons and tons of features built in Cypher Premium and we want you to try them out!</p>
+			</div>
+			<div class="service">
+				<i class="fas fa-air-freshener"></i>
+				<h2>Spaghetti</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+			</div>
+			<div class="service">
+				<i class="fas fa-air-freshener"></i>
+				<h2>Spaghetti</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- * DISCORD * -->
+
+	<div class="discord">
+		<div class="overlay"></div>
+		<div class="text" data-aos="fade-right" data-aos-duration="1000">
+			<h1>Why don't you check out our<br><span style="color: #1e2124; font-weight: 700;">Discord Server?</span></h1>
+			<a href="https://discord.com/invite/peynir" target="_blank">Join Now!</a>
+		</div>
+		<div class="discordImg" data-aos="fade-left" data-aos-duration="1000">
+			<img src="images/logo.png">
+		</div>
+	</div>
+
+
+	<!-- * FOOTER * -->
+
+    <div class="footer">
+    	<h2>Çedar</h2>
+    	<div class="footerLinks">
+    		<a href="#" class="colored">Home</a>
+    		<a href="#about">About Us</a>
+    		<a href="Members/members.html">Team</a>
+    		<a href="https://discord.com/invite/peynir" target="_blank">Discord</a>
+    	</div>
+    	<p class="copyright">
+    		&copy; Copyrighted by <span>Çedar Peynirleri</span>
+    	</p>
+    </div>
+
+	<!-- JAVASCRIPT -->
+
+	<script>
+	// TOGGLE EFFECT
+		function toggle() {
+			var home = document.getElementById('home');
+			var nav = document.getElementById('navigation');
+			home.classList.toggle('active');
+			nav.classList.toggle('active');
+		}
+	</script>
+  	<script>
+  	// PRELOADER EFFECT
+    	$(window).on("load",function(){
+     	$(".loader-wrapper").fadeOut("slow");
+    	});
+  	</script>
+  	<script>
+  		// ANIMATE ON SCROLL
+  		AOS.init();
+	</script>	
+</body>
+</html>

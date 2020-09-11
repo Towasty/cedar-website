@@ -1,0 +1,539 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	text-decoration: none;
+}
+
+html{
+	scroll-behavior: smooth;	
+}
+
+/* ======= ROOT =======*/
+
+:root{
+	--blurple: #7289DA;
+	--darker: #5b6ba3;
+	--darkblack: #1e2124;
+	--background: url(images/background.jpg);
+}
+
+.container{
+	max-width: 1200px;
+	margin: auto;
+	overflow: hidden;
+	padding: 20px;
+}
+
+
+/* ======= BEGIN LOADER =======*/
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #18191a;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #Fff;
+  animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 1.5s infinite ease-in;
+}
+
+
+/* ======= NAVBAR + HEADER =======*/
+
+header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 40px 100px;
+	z-index: 10000;
+	transition: 0.4s;
+}
+
+/* BEGIN TOGGLE */
+
+header #toggle{
+	position: relative;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+
+header #toggle:before{
+	content: '';
+	position: absolute;
+	top: 7px;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+}
+
+header #toggle:after{
+	content: '';
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+}
+
+/* END TOGGLE */
+
+
+
+header .logo{
+	position: relative;
+	font-weight: 700;
+	color: #fff;
+	text-decoration: none;
+	font-size: 2em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	transition: 0.4s;
+}
+
+
+.banner.active header #toggle:before{
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.banner.active header #toggle:after{
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.banner{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	padding: 100px;
+	background: var(--background);
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	transition: 0.8s;
+	z-index: 8;
+}
+
+.banner:before{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 300px;
+	z-index: 1;
+	background: linear-gradient(to top, #111, transparent);
+}
+
+.banner .overlay{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .2;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    z-index: -1;
+}
+
+.banner.active{
+	transform: translateX(-400px);
+}
+
+#navigation{
+	position: fixed;
+	top: 0;
+	right: -200px;
+	width: 400px;
+	height: 100vh;
+	z-index: 1;
+	place-items: center;
+	transition: 0.8s;
+	display: grid;
+	background: #121212;
+}
+
+#navigation ul li a.colored{
+	color: var(--darker);
+}
+
+
+#navigation.active{
+	right: 0;
+}
+
+#navigation ul{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+#navigation ul li{
+	list-style: none;
+}
+
+#navigation ul li a{
+	color: #fff;
+	font-weight: 600;
+	font-size: 2em;
+	display: inline-block;
+	text-transform: uppercase;
+	transition: 0.2s;
+}
+
+#navigation ul li a:hover{
+	color: var(--blurple);
+}
+
+/* BEGIN LANDINGPAGE*/
+
+.content{
+	max-width: 600px;
+}
+.content h2{
+	color: #fff;
+	font-size: 2.3em;
+	margin-bottom: 10px;
+}
+.content h2 span{
+	color: var(--blurple);
+	font-weight: 700;
+	font-size: 1.2em;
+}
+.content p{
+	font-size: 16px;
+	color: #fff;
+	opacity: .8;
+	font-weight: 300;
+}
+
+.content a{
+	position: relative;
+	display: inline-block;
+	margin-top: 25px;
+	color: #fff;
+	padding: 10px 30px;
+	border: 2px solid #fff;
+	font-size: 18px;
+	font-weight: 600;
+	border-radius: 4px;
+	transition: 0.2s;
+}
+
+.content a:hover{
+	border: 2px solid #6579bf;
+	color: var(--blurple);
+}
+
+
+
+/* ======= ABOUT US =======*/
+
+.p-t-30{
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.services{
+	background: #111;
+	position: relative;
+	width: 100%;
+	text-align: center;
+	z-index: 99;
+}
+
+.services h1{
+	display: inline-block;
+	color: #fff;   
+	font-weight: 600;
+	font-size: 2.2rem;
+	padding-bottom: 10px;
+}
+
+.services span{
+	color: var(--blurple);
+	font-weight: 700;
+}
+
+
+.service{
+	display: inline-block;
+	margin: 0 -2px;
+	padding: 20px;
+	box-sizing: border-box;
+	width: calc(100% / 3);
+}
+
+.service i{
+	font-size: 34px;
+	color: var(--blurple);
+	margin-bottom: 20px;
+}
+
+.service h2{
+	/*font-size: 18px;*/
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin: 0;
+	padding-bottom: 8px;
+}
+
+.service p{
+	color: #fff;
+	opacity: .7;
+	font-weight: 300;
+}
+
+
+/* ======= DISCORD =======*/
+
+.discord{
+	height: 400px;
+	background: url(images/banner.jpeg);
+	background-position: right;
+	background-size: cover;
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	padding: 50px;
+	box-shadow: inset 0px 0px 52px 0px rgba(0, 0, 0, 0.8);
+	justify-content: space-evenly;
+	position: relative;
+	width: 100%;
+	z-index: 9;
+	align-items: center;
+}
+
+.discord .overlay{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+	box-shadow: inset 0px 0px 52px 0px rgba(0, 0, 0, 0.8);
+   	background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+    z-index: -1;
+}
+
+.text h1{
+	font-size: 35px;
+	color: #fff;
+	font-weight: 550;
+}
+
+.text a{
+    position: relative;
+    display: inline-block;
+    margin-top: 25px;
+    color: #fff;
+    padding: 10px 30px;
+    border: 2px solid #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.text a:hover{
+	border: 2px solid var(--darkblack);
+    color: var(--darkblack);
+}
+
+.text h1 span{
+	color: #000;
+	font-weight: 680;
+	opacity: 1;
+}
+
+.discordImg img{
+	width: 23vw;
+}
+
+
+
+/* ======= FOOTER =======*/
+
+.footer{
+	width: 100%;
+	position: relative;
+	bottom: 0;
+	background: #111;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	z-index: 9;
+	color: #fff;
+	padding: 30px;
+}
+.footer h2{
+    color: #fff;
+    font-weight: 700;
+    font-size: 35px;
+}
+
+
+.footerLinks a{
+	text-decoration: none;
+	margin: 20px;
+	display: inline-block;
+	font-size: 18px;
+	font-weight: 600;
+	opacity: .5;
+	color: #fff;
+	transition: 0.5s;
+}
+
+.footerLinks .colored{
+	color: var(--darker);
+	font-weight: 650;
+	opacity: 1;
+}
+
+.footerLinks a:hover{
+	transform: translateY(-2px);
+}
+
+.copyright{
+	opacity: .4;
+	font-size: 13px;
+	font-weight: 520;
+}
+
+.copyright span{
+	font-weight: 800;
+	color: var(--blurple);
+}
+
+
+/* ======= KEYFRAMES =======*/
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  25% {
+    transform: rotate(180deg);
+  }
+  
+  50% {
+    transform: rotate(180deg);
+  }
+  
+  75% {
+    transform: rotate(360deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  
+  25% {
+    height: 0%;
+  }
+  
+  50% {
+    height: 100%;
+  }
+  
+  75% {
+    height: 100%;
+  }
+  
+  100% {
+    height: 0%;
+  }
+}
+
+
+/* ======= RESPONSIVE =======*/
+
+@media (max-width: 767px)
+{
+	header{
+		padding: 20px 50px;
+	}
+	.banner{
+		padding: 100px 50px 150px;
+	}
+	.banner:before{
+		height: 100px;
+	}
+	.banner h2{
+		font-size: 1.8em;
+	}
+	.banner .content p,
+	.banner .content a{
+		font-size: 16px;
+	}
+	.banner.active{
+		transform: translateX(-250px);
+	}
+	#navigation{
+		width: 250px;
+	}
+	#navigation ul li a{
+		margin: 5px 0;
+		font-size: 1.5em;
+	}
+	.service{
+		width: 100%;
+	}
+	.discord{
+		height: auto;
+		flex-direction: column-reverse;
+		padding: 50px;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+	.text h1{
+		font-size: 38px;
+	}
+	.discordImg img{
+		display: none;
+	}
+}
