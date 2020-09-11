@@ -1,2 +1,3 @@
-# cedar-website
-Github Reposity website for Toasty's server.
+# Cedar Website
+
+Github Reposity website for Toasty's server; Çedar Peynirleri.
