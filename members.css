@@ -148,7 +148,7 @@ header .logo{
 	width: 100%;
 	min-height: 100vh;
 	padding: 100px;
-	background: url(4.jpg);
+	background: url(images/bg/8.jpg);
 	background-attachment: fixed;
 	background-size: cover;
 	transition: 0.8s;
@@ -320,6 +320,8 @@ header .logo{
 	color: #fff;
 	padding: 30px;
 }
+
+
 .footer h2{
     color: #fff;
     font-weight: 700;
