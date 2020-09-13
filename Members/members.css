@@ -257,11 +257,17 @@ header .logo{
 	font-weight: 700;
 	color: #fff;
 	font-size: 19px;
+	transition: 0.4s;
+}
+
+.name:hover{
+	color: #f26b6b;
+
 }
 
 .description{
 	font-size: 15px;
-	font-weight: 450;
+	font-weight: 700;
 	opacity: .7;
 	color: #fff;
 }
@@ -293,6 +299,60 @@ header .logo{
 	line-height: 30px;
 }
 
+
+/* ======= FOOTER =======*/
+
+.footer{
+	width: 100%;
+	position: relative;
+	bottom: 0;
+	background: #111;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	z-index: 9;
+	color: #fff;
+	padding: 30px;
+}
+.footer h2{
+    color: #fff;
+    font-weight: 700;
+    font-size: 35px;
+}
+
+
+.footerLinks a{
+	text-decoration: none;
+	margin: 20px;
+	display: inline-block;
+	font-size: 18px;
+	font-weight: 600;
+	opacity: .5;
+	color: #fff;
+	transition: 0.5s;
+}
+
+.footerLinks .colored{
+	color: var(--darker);
+	font-weight: 650;
+	opacity: 1;
+}
+
+.footerLinks a:hover{
+	transform: translateY(-2px);
+}
+
+.copyright{
+	opacity: .4;
+	font-size: 13px;
+	font-weight: 520;
+}
+
+.copyright span{
+	font-weight: 800;
+	color: var(--blurple);
+}
 
 /* ======= KEYFRAMES =======*/
 
