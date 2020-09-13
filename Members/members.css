@@ -239,6 +239,12 @@ header .logo{
 	overflow: hidden;
 	width: calc(100% / 3);
 	padding: 40px 0;
+	transition: 0.5s;
+}
+
+.member:hover{
+	background-color: rgb(0,0,0,0.2);
+	border-radius: 8px;
 }
 
 .member img{

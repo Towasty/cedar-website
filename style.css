@@ -23,6 +23,7 @@ html{
 	--purple: #9d75c9;
 	--darker: #5b6ba3;
 	--darkblack: #1e2124;
+	--bg: #111;
 	--background: url(images/bg/2.jpg);
 }
 
@@ -174,6 +175,8 @@ header .logo{
 .banner.active{
 	transform: translateX(-400px);
 }
+
+
 
 #navigation{
 	position: fixed;
@@ -353,14 +356,14 @@ header .logo{
 
 .discord{
 	height: 400px;
-	background: url(images/banner.jpeg);
+	background: var(--bg);
 	background-position: right;
 	background-size: cover;
 	display: flex;
 	width: 100%;
 	flex-direction: row;
 	padding: 50px;
-	box-shadow: inset 0px 0px 52px 0px rgba(0, 0, 0, 0.8);
+	/*box-shadow: inset 0px 0px 52px 0px rgba(0, 0, 0, 0.8);*/
 	justify-content: space-evenly;
 	position: relative;
 	width: 100%;
@@ -368,7 +371,7 @@ header .logo{
 	align-items: center;
 }
 
-.discord .overlay{
+/*.discord .overlay{
 	position: absolute;
     top: 0;
     left: 0;
@@ -378,8 +381,12 @@ header .logo{
 	box-shadow: inset 0px 0px 52px 0px rgba(0, 0, 0, 0.8);
    	background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
     z-index: -1;
-}
+}*/
 
+
+.text{
+	transform: translateX(-180px);
+}
 .text h1{
 	font-size: 35px;
 	color: #fff;
@@ -400,8 +407,8 @@ header .logo{
 }
 
 .text a:hover{
-	border: 2px solid var(--darkblack);
-    color: var(--darkblack);
+	background: #fff;
+    color: #111;
 }
 
 .text h1 span{
@@ -411,6 +418,7 @@ header .logo{
 }
 
 .discordImg img{
+	filter: invert(1);
 	width: 23vw;
 }
 
@@ -441,6 +449,7 @@ header .logo{
 .footerLinks a{
 	text-decoration: none;
 	margin: 20px;
+	font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 	display: inline-block;
 	font-size: 18px;
 	font-weight: 600;
@@ -594,6 +603,9 @@ header .logo{
 {
 	header{
 		padding: 20px 50px;
+	}
+	.text{
+		transform: translateX(0);
 	}
 	.banner{
 		padding: 100px 50px 150px;
