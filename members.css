@@ -119,7 +119,8 @@ header #toggle:after{
 
 
 
-header .logo{
+
+/*header .logo{
 	position: relative;
 	font-weight: 700;
 	color: #fff;
@@ -128,6 +129,16 @@ header .logo{
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	transition: 0.4s;
+}*/
+
+header .logo img{
+	width: 50px;
+	position: relative;
+	height: 50px;
+	transition: 0.3s;
+}
+header .logo img:hover{
+	transform: scale(1.025);
 }
 
 
